@@ -1,0 +1,381 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+button {
+  all: unset;
+}
+a {
+  text-decoration: none;
+  color: inherit;
+  font-size: var(--font-size-link);
+  letter-spacing: var(--letter-space-link);
+}
+
+button {
+  font-size: var(--font-size-link);
+}
+
+:root {
+  --main-accent-1: #ffc593;
+  --main-accent-2: #bc7198;
+  --main-accent-3: #5a77ff;
+  --gradient-hover: linear-gradient(
+    27deg,
+    #ffc593 0%,
+    #bc7198 43.29%,
+    #5a77ff 83.33%
+  );
+
+  /* Pure black */
+  --black: #000000;
+  /* Light grey */
+  --light-grey: #dfdfdf;
+  /* white */
+  --white: #ffffff;
+  /* header dimension */
+  --header-height: 72px;
+
+  /* font global*/
+  --font-family-body: DM Sans;
+  --font-size-body: 15px;
+  --font-line-body: 25px;
+
+  /* font heading */
+  --font-size-h2: 40px;
+  --line-height-h2: 48px;
+
+  /* font link/button */
+  --font-size-link: 12px;
+  --line-height-link: 16px;
+  --letter-space-link: 2px;
+
+  /* image size main */
+  --width-image-main: 830px;
+  --height-footer: 250px;
+}
+
+body {
+  font-family: var(--font-family-body);
+  font-size: var(--font-size-body);
+  line-height: var(--font-line-body);
+  margin: auto;
+  max-width: 1440px;
+}
+
+main {
+  width: 100%;
+}
+
+/* *********Header / navbar************** */
+
+header ul {
+  display: flex;
+  list-style: none;
+  justify-content: space-evenly;
+  align-items: center;
+  height: var(--header-height);
+}
+
+header ul > div {
+  display: flex;
+  gap: 2.31rem;
+}
+
+/* invite header/navbar */
+#invite {
+  width: 9.875rem;
+  height: 2.5rem;
+  background-color: var(--black);
+  color: var(--white);
+  text-align: center;
+  font-size: var(--font-size-link);
+  letter-spacing: var(--letter-space-link);
+}
+
+#invite:first-of-type:hover {
+  background-color: var(--light-grey);
+  color: var(--black);
+}
+
+.menu-items li:hover {
+  color: var(--light-grey);
+}
+
+/* mis en page /layout main section */
+.container {
+  display: flex;
+}
+
+.card-main h2 {
+  font-size: var(--font-size-h2);
+  line-height: var(--line-height-h2);
+  letter-spacing: 4.17px;
+}
+
+.card-main-1 {
+  background-color: var(--black);
+  color: var(--white);
+}
+
+.container > img {
+  object-fit: cover;
+}
+
+.card-main {
+  padding: 6em;
+  grid-column: 1fr;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: start;
+  gap: 1em;
+}
+.card-main p {
+  color: var(--light-grey);
+}
+
+.card-main a:hover {
+  text-decoration: underline;
+}
+
+.link-arrow {
+  display: flex;
+  align-items: center;
+  padding-top: 2em;
+  gap: 1.2em;
+}
+
+.link-arrow:hover #invite-2 {
+  text-decoration: underline;
+}
+
+.link-arrow:hover a {
+  text-decoration: underline;
+}
+
+.link-arrow:hover {
+  cursor: pointer;
+}
+
+/* *********************************small card *********/
+.container-story {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+}
+
+.card-story {
+  color: var(--white);
+  align-self: center;
+  display: flex;
+  flex-direction: column;
+  justify-content: end;
+  min-height: 500px;
+  padding: 3em;
+  background-size: cover;
+  background-repeat: no-repeat;
+  position: relative;
+  bottom: 0;
+  transition-property: bottom;
+  transition-duration: 0.5s;
+}
+.card-story::after {
+  content: "";
+  width: 100%;
+  position: absolute;
+  left: 0%;
+  bottom: 0%;
+  z-index: -1;
+  height: 6px;
+  background: linear-gradient(
+    27deg,
+    #ffc593 0%,
+    #bc7198 43.29%,
+    #5a77ff 83.33%
+  );
+}
+
+.card-story:hover {
+  cursor: pointer;
+  bottom: 2em;
+}
+
+.card-story:hover::after {
+  z-index: 1;
+  opacity: 100%;
+}
+
+.card-story-1 {
+  background-image: url(./assets/stories/desktop/mountains.jpg);
+}
+
+.card-story-2 {
+  background-image: url(./assets/stories/desktop/cityscapes.jpg);
+}
+
+.card-story-3 {
+  background-image: url(./assets/stories/desktop/18-days-voyage.jpg);
+}
+
+.card-story-4 {
+  background-image: url(./assets/stories/desktop/architecturals.jpg);
+}
+
+.read-story-arrow {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding-top: 0.6em;
+}
+
+hr {
+  height: 0;
+  border: 0.4px solid #ffffff;
+  opacity: 0.25;
+  margin-top: 0.3em;
+}
+
+/* ****************** */
+.container-feature {
+  display: flex;
+  padding: 6em;
+  gap: 3em;
+  width: 100%;
+}
+.card-feature {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+  align-items: center;
+  text-align: center;
+}
+.card-feature > img {
+  width: 72px;
+  padding-bottom: 4em;
+}
+/* **************footer*********** */
+
+footer {
+  min-height: var(--height-footer);
+  background-color: var(--black);
+  color: var(--white);
+  display: flex;
+  justify-content: space-between;
+}
+.left-grid {
+  padding: 5em;
+  margin-left: 4em;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-template-rows: 1fr 1fr;
+  gap: 5em;
+}
+
+/* positionnement/hover des logos social network */
+.left-grid .social {
+  display: flex;
+  flex-direction: row;
+  gap: 1em;
+}
+.social-item {
+  position: relative;
+}
+#facebook-white {
+  position: absolute;
+}
+#twitter-white {
+  position: absolute;
+  z-index: 1;
+}
+#pinterest-white {
+  position: absolute;
+  z-index: 1;
+}
+#youtube-white {
+  position: absolute;
+  z-index: 1;
+}
+#instagram-white {
+  position: absolute;
+  z-index: 1;
+}
+/* hover fait disparaitre les icones blanches */
+.social-item:hover {
+  cursor: pointer;
+}
+
+.facebook:hover #facebook-white {
+  display: none;
+}
+.twitter:hover #twitter-white {
+  display: none;
+}
+.pinterest:hover #pinterest-white {
+  display: none;
+}
+
+.youtube:hover #youtube-white {
+  display: none;
+}
+.instagram:hover #instagram-white {
+  display: none;
+}
+/*  */
+
+.left-grid > ul {
+  grid-row: span 2;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  list-style: none;
+  font-size: var(--font-size-link);
+  letter-spacing: var(--letter-space-link);
+}
+
+.left-grid > ul li:hover {
+  cursor: pointer;
+  color: var(--light-grey);
+}
+
+.left-grid svg:last-child {
+  align-self: flex-end;
+}
+
+.right-flex {
+  display: flex;
+  padding: 5em;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: end;
+  font-size: var(--font-size-link);
+}
+
+.right-flex > p {
+  color: var(--light-grey);
+}
+
+@media screen and (min-width: 962px) and (max-width: 1280px) {
+  .container-feature {
+    display: flex;
+    flex-direction: column;
+  }
+
+  .container-story {
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-rows: repeat(2, 500px);
+    background-size: cover;
+  }
+
+  /* responsive grille features */
+  .container > img {
+    width: 40%;
+  }
+}
+
+
+
+@media screen and (max-width: 962px) {
+    
+}
