@@ -119,8 +119,31 @@ main {
   
 }
 
+.link-arrow{
+    color: var(--white);
+    text-transform: uppercase;
+    display: flex;
+    align-items: center;
+    gap: 6em;
+    padding-top: 3em;
+}
+
+.flex-main-story p:first-of-type{
+ color: var(--white);
+ text-transform: uppercase;
+ 
+ 
+}
+.flex-main-story p:nth-child(3){
+    padding: 2em 0;
+    font-size: 13px;
+}
+.flex-main-story span{
+    color: var(--white);
+}
+
 .flex-main-story{
-width: 25%;    
+width: 35%;    
 }
 .card-story-0 h2 {
   font-size: var(--font-size-h2);
