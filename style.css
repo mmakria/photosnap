@@ -410,7 +410,7 @@ img{
     }
     .container-story {
       grid-template-columns: 1fr;
-      grid-template-rows: repeat(2, 500px);
+      grid-template-rows: repeat(4, 375px);
       background-size: cover;
     }
     footer{
@@ -439,7 +439,6 @@ img{
       grid-row: 2/3;
       align-self: self-end;
     }
-   
 
     .menu-items{
       display: none;
@@ -451,7 +450,33 @@ img{
       gap: 2em;
       padding: 0;
       margin-bottom: 4em;
-
     }
- 
+
+    :root {
+      /* font heading */
+      --font-size-h2: 32px;
+      --line-height-h2: 40px;
+    
+      /* font link/button */
+      --font-size-link: 12px;
+      --line-height-link: 16px;
+      --letter-space-link: 2px;
+    
+      /* image size main */
+      --width-image-main: 830px;
+      --height-footer: 250px;
+    }
+    .card-main{
+      padding: 5em 2.9em;
+    }
+    .link-arrow{
+      padding-top: 0;
+    }
+  
+    .card-story {
+      min-height: 375px;
+    }
+    body{
+      max-width: 500px;
+    }
 }
